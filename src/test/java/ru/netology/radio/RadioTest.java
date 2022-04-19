@@ -16,7 +16,7 @@ public class RadioTest {
 
         assertEquals(expected, actual);
     }
-@Test
+    @Test
     void TestSetStation2() {
         Radio radio = new Radio();
         radio.setCurrentNumberStation(0);
@@ -25,7 +25,7 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
 
-@Test
+    @Test
     void TestSetStation3() {
         Radio radio = new Radio();
         radio.setCurrentNumberStation(10);
