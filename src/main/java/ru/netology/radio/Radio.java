@@ -16,14 +16,14 @@ public class Radio {
         this.currentNumberStation = CurrentNumberStation;
     }
 
-    public int nextNumberStation(int currentNumberStation) {
+    public int nextNumberStation() {
         if (currentNumberStation < 9) {
             return this.currentNumberStation = currentNumberStation + 1;
         }
         return this.currentNumberStation = 0;
     }
 
-    public int prevNumberStation(int currentNumberStation) {
+    public int prevNumberStation() {
         if (currentNumberStation > 0) {
             return this.currentNumberStation = currentNumberStation - 1;
         }
@@ -43,7 +43,7 @@ public class Radio {
 
     public int decreaseVolume() {
         if (currentVolume > 0) {
-            return this.currentVolume = currentVolume - 1;
+            return currentVolume = currentVolume - 1;
         }
         return this.currentVolume;
     }
