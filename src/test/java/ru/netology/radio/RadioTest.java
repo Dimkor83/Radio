@@ -46,163 +46,144 @@ public class RadioTest {
     @Test
     void nextNumberStation1() {
         Radio radio = new Radio();
-        radio.nextNumberStation(0);
+        radio.setCurrentNumberStation(0);
         int expected = 1;
-        int actual = radio.nextNumberStation(0);
+        int actual = radio.nextNumberStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextNumberStation2() {
         Radio radio = new Radio();
-        radio.nextNumberStation(1);
+        radio.setCurrentNumberStation(1);
         int expected = 2;
-        int actual = radio.nextNumberStation(1);
+        int actual = radio.nextNumberStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextNumberStation3() {
         Radio radio = new Radio();
-        radio.nextNumberStation(8);
+        radio.setCurrentNumberStation(8);
         int expected = 9;
-        int actual = radio.nextNumberStation(8);
+        int actual = radio.nextNumberStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void nextNumberStation4() {
         Radio radio = new Radio();
-        radio.nextNumberStation(9);
+        radio.setCurrentNumberStation(9);
         int expected = 0;
-        int actual = radio.nextNumberStation(9);
+        int actual = radio.nextNumberStation();
         assertEquals(expected, actual);
     }
-
-    @Test
-    void nextNumberStation5() {
-        Radio radio = new Radio();
-        radio.nextNumberStation(10);
-        int expected = 10;
-        int actual = radio.nextNumberStation(10);
-        assertEquals(expected, actual);
-    }
-
 
     @Test
     void prevNumberStation1() {
         Radio radio = new Radio();
-        radio.prevNumberStation(9);
+        radio.setCurrentNumberStation(9);
         int expected = 8;
-        int actual = radio.prevNumberStation(9);
+        int actual = radio.prevNumberStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevNumberStation2() {
         Radio radio = new Radio();
-        radio.prevNumberStation(8);
+        radio.setCurrentNumberStation(8);
         int expected = 7;
-        int actual = radio.prevNumberStation(8);
+        int actual = radio.prevNumberStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevNumberStation3() {
         Radio radio = new Radio();
-        radio.prevNumberStation(1);
+        radio.setCurrentNumberStation(1);
         int expected = 0;
-        int actual = radio.prevNumberStation(1);
+        int actual = radio.prevNumberStation();
         assertEquals(expected, actual);
     }
 
     @Test
     void prevNumberStation4() {
         Radio radio = new Radio();
-        radio.prevNumberStation(0);
+        radio.setCurrentNumberStation(0);
         int expected = 9;
-        int actual = radio.prevNumberStation(0);
+        int actual = radio.prevNumberStation();
         assertEquals(expected, actual);
     }
 
     @Test
-    void prevNumberStation5() {
+    void increaseVolume1() {
         Radio radio = new Radio();
-        radio.prevNumberStation(-1);
-        int expected = -1;
-        int actual = radio.prevNumberStation(-1);
-        assertEquals(expected, actual);
-    }
-
-    @Test
-    void increaseVolume() {
-        Radio radio = new Radio();
-        radio.increaseVolume(10);
+        radio.setCurrentVolume(10);
         int expected = 10;
-        int actual = radio.increaseVolume(10);
+        int actual = radio.increaseVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void increaseVolume2() {
         Radio radio = new Radio();
-        radio.increaseVolume(9);
+        radio.setCurrentVolume(9);
         int expected = 10;
-        int actual = radio.increaseVolume(9);
+        int actual = radio.increaseVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void increaseVolume3() {
         Radio radio = new Radio();
-        radio.increaseVolume(0);
+        radio.setCurrentVolume(0);
         int expected = 1;
-        int actual = radio.increaseVolume(0);
+        int actual = radio.increaseVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void increaseVolume4() {
         Radio radio = new Radio();
-        radio.increaseVolume(1);
+        radio.setCurrentVolume(1);
         int expected = 2;
-        int actual = radio.increaseVolume(1);
+        int actual = radio.increaseVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void decreaseVolume1() {
         Radio radio = new Radio();
-        radio.decreaseVolume(1);
+        radio.setCurrentVolume(1);
         int expected = 0;
-        int actual = radio.decreaseVolume(1);
+        int actual = radio.decreaseVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void decreaseVolume2() {
         Radio radio = new Radio();
-        radio.decreaseVolume(0);
+        radio.setCurrentVolume(0);
         int expected = 0;
-        int actual = radio.decreaseVolume(0);
+        int actual = radio.decreaseVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void decreaseVolume3() {
         Radio radio = new Radio();
-        radio.decreaseVolume(10);
+        radio.setCurrentVolume(10);
         int expected = 9;
-        int actual = radio.decreaseVolume(10);
+        int actual = radio.decreaseVolume();
         assertEquals(expected, actual);
     }
 
     @Test
     void decreaseVolume4() {
         Radio radio = new Radio();
-        radio.decreaseVolume(9);
+        radio.setCurrentVolume(9);
         int expected = 8;
-        int actual = radio.decreaseVolume(9);
+        int actual = radio.decreaseVolume();
         assertEquals(expected, actual);
     }
 
