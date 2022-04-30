@@ -187,5 +187,14 @@ public class RadioTest {
         assertEquals(expected, actual);
     }
 
+    @Test
+    void setCurrentVolume() {
+        Radio radio = new Radio();
+        radio.setCurrentVolume(11);
+        int expected = 0;
+        int actual = radio.getCurrentVolume();
+        assertEquals(expected, actual);
+    }
+
 
 }
